@@ -168,7 +168,7 @@ class Http:
         """
         Receive and parse request header into self.request.
         """
-        HEADER_MAX_SIZE = min(8192, self.request_max_size)
+        HEADER_MAX_SIZE = min(32000, self.request_max_size)
         # Receive until full header is in buffer
         buf = self.recv_buffer
         pos = 0
